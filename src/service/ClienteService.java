@@ -29,9 +29,11 @@ public class ClienteService {
         Cliente cliente = new Cliente(dni, nombre, tipo);
         clienteRepo.guardar(cliente);
         Console.info("Cliente registrado: " + nombre);
+        Console.info("DNI" + dni);
     }
 
     public Cliente buscarCliente(String dni) {
         return clienteRepo.buscarPorDni(dni);
+        
     }
 }
